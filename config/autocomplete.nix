@@ -1,0 +1,10 @@
+{
+  config.vim.autocomplete = {
+    enable = true;
+    sources = {
+      "nvim_lsp" = "[LSP]";
+      "path" = "[Path]";
+      "buffer" = "[Buffer]";
+    };
+  };
+}
