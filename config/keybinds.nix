@@ -1,13 +1,11 @@
 {
   config.vim.maps = {
     normal = {
-      "<leader>f".action = "<cmd>FzfLua live_grep<CR>";
-      "<leader>b".action = "<cmd>NvimTreeToggle<CR>";
-      "<leader>e".action = "<cmd>FzfLua files<CR>";
+      "<leader>f".action = "<cmd>Telescope live_grep<CR>";
+      "<leader>b".action = "<cmd>Neotree<CR>";
+      "<leader>e".action = "<cmd>Telescope find_files<CR>";
       "<leader>g".action = "<cmd>LazyGit<CR>";
-      "<leader>n".action = "<cmd>BufferLineCycleNext<CR>";
-      "<leader>p".action = "<cmd>BufferLineCyclePrev<CR>";
-      "<leader>t".action = "<cmd>FloatermToggle<CR>";
+      "<leader>t".action = "<cmd>ToggleTerm<CR>";
     };
     insert = { "jj".action = "<ESC>"; };
   };

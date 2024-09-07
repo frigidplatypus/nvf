@@ -15,7 +15,7 @@ require("dashboard").setup({
         footer = {"Hi, ch4og!"},
         center = {
             {
-                action = "FzfLua files",
+                action = "Telescope find_files",
                 desc = " Find File",
                 icon = " ",
                 key = "e"
@@ -27,23 +27,17 @@ require("dashboard").setup({
                 key = "n"
             },
             {
-                action = "FzfLua oldfiles",
+                action = "Telescope oldfiles",
                 desc = " Recent Files",
                 icon = " ",
                 key = "r"
             },
             {
-                action = "FzfLua live_grep",
+                action = "Telescope live_grep",
                 desc = " Find Text",
                 icon = " ",
                 key = "f"
-            }, {
-                action = 'lua require("persistence").load()',
-                desc = " Restore Session",
-                icon = " ",
-                key = "s"
             },
-            {action = "LazyGit", desc = " LazyGit", icon = " ", key = "g"},
             {action = "qa", desc = " Quit", icon = " ", key = "q"}
         }
     }

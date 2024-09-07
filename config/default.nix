@@ -8,6 +8,7 @@
     useSystemClipboard = true;
     leaderKey = " ";
     autoIndent = true;
+    spellcheck.enable = true;
     luaConfigPost = ''
       vim.opt.tabstop = 2
       vim.opt.shiftwidth = 2

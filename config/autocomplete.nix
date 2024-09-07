@@ -6,5 +6,6 @@
       "path" = "[Path]";
       "buffer" = "[Buffer]";
     };
+    mappings.complete = null;
   };
 }
