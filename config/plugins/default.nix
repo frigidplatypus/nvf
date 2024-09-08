@@ -1,4 +1,4 @@
-{pkgs, ... }:{
+{ pkgs, ... }: {
   config.vim = {
     statusline.lualine.enable = true;
     telescope.enable = true;
@@ -20,20 +20,21 @@
     git.gitsigns.enable = true;
     autopairs.enable = true;
 
-  extraPlugins = {
-    dashboard-nvim = {
-      package = "dashboard-nvim";
-      setup = builtins.readFile ./dashboard-nvim.lua;
-    };
-    vim-suda = {
-      package = pkgs.vimPlugins.vim-suda;
+    extraPlugins = {
+      dashboard-nvim = {
+        package = "dashboard-nvim";
+        setup = builtins.readFile ./dashboard-nvim.lua;
+      };
+      vim-suda = {
+        package = pkgs.vimPlugins.vim-suda;
 
         setup = "vim.g.suda_smart_edit = 1";
+      };
+      supermaven-nvim = {
+        package = pkgs.vimPlugins.supermaven-nvim;
+        setup = ''
+          require("supermaven-nvim").setup({keymaps = {accept_suggestion = "<C-space>"} })'';
+      };
     };
-    supermaven-nvim = {
-      package = pkgs.vimPlugins.supermaven-nvim;
-      setup = "require(\"supermaven-nvim\").setup({keymaps = {accept_suggestion = \"<C-space>\"} })";
-    };
-  };
   };
 }
