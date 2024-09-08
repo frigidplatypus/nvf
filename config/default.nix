@@ -2,7 +2,6 @@
   imports =
     [ ./keybinds.nix ./plugins ./theme.nix ./autocomplete.nix ./languages.nix ];
   config.vim = {
-    lsp.enable = true;
     updateTime = 100;
     lineNumberMode = "relNumber";
     useSystemClipboard = true;

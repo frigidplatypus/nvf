@@ -3,7 +3,7 @@
 My personal config.
 
 TODO:
-- [ ] Figure out why formatting doesn't work
+- [x] Figure out why formatting doesn't work
 - [ ] [markview.nvim](https://github.com/OXY2DEV/markview.nvim)
 - [ ] [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)
 - [ ] [mini.surround](https://github.com/echasnovski/mini.surround)

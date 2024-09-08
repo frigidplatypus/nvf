@@ -1,4 +1,8 @@
 {
+  config.vim.lsp = {
+    enable = true;
+    formatOnSave = true;
+  };
   config.vim.languages = {
     enableFormat = true;
     enableLSP = true;
