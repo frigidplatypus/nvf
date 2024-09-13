@@ -2,7 +2,6 @@
   config.vim.treesitter = {
     enable = true;
     highlight.enable = true;
-    # grammars = with pkgs.vimPlugins.nvim-treesitter-parsers; [
     grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
       c

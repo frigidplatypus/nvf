@@ -7,5 +7,6 @@
       "buffer" = "[Buffer]";
     };
     mappings.complete = null;
+    mappings.confirm = null;
   };
 }
