@@ -6,6 +6,7 @@
       "<leader>e".action = "<cmd>Telescope find_files<CR>";
       "<leader>g".action = "<cmd>LazyGit<CR>";
       "<leader>t".action = "<cmd>ToggleTerm<CR>";
+      "<leader>P".action = "<cmd>lua require(\"img-clip\").paste_image({dir_path=\"images\",  file_name = \"image.png\"})<CR>";
     };
     insert = { "jj".action = "<ESC>"; };
   };
