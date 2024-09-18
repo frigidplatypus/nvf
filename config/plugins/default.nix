@@ -43,26 +43,39 @@
     };
 
 
-    extraPlugins = {
+    extraPlugins = with pkgs.vimPlugins; {
       dashboard-nvim = {
-        package = "dashboard-nvim";
+        package = dashboard-nvim;
         setup = builtins.readFile ./dashboard-nvim.lua;
       };
       vim-suda = {
-        package = pkgs.vimPlugins.vim-suda;
+        package = vim-suda;
 
         setup = "vim.g.suda_smart_edit = 1";
       };
       supermaven-nvim = {
-        package = pkgs.vimPlugins.supermaven-nvim;
-        setup = ''
-          require("supermaven-nvim").setup({keymaps = {accept_suggestion = "<C-space>"} })'';
+        package = supermaven-nvim;
+        setup = "require(\"supermaven-nvim\").setup({keymaps = {accept_suggestion = \"<C-space>\"} })";
       };
       bullets-vim = {
-        package = pkgs.vimPlugins.bullets-vim;
+        package = bullets-vim;
       };
       img-clip-nvim = {
-        package = pkgs.vimPlugins.img-clip-nvim;
+        package = img-clip-nvim;
+      };
+      headlines-nvim = {
+        package = headlines-nvim;
+        setup = ''
+          vim.cmd [[highlight Headline1 guibg=#1e2718]]
+          vim.cmd [[highlight Headline2 guibg=#21262d]]
+          vim.cmd [[highlight CodeBlock guibg=#1c1c1c]]
+          vim.cmd [[highlight Dash guibg=#D19A66 gui=bold]]
+
+          require("headlines").setup {
+            org = {
+              headline_highlights = { "Headline1", "Headline2" },
+            },
+          }'';
       };
     };
   };
