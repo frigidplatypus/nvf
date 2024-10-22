@@ -55,7 +55,7 @@
     markdown.enable = true;
     nix = {
       enable = true;
-      format.type = "nixpkgs-fmt";
+      format.type = "nixfmt";
     };
     python.enable = true;
     rust.enable = true;

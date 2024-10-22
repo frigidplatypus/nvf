@@ -20,7 +20,7 @@
       setupOpts.indent.tab_char = "|";
     };
     git.gitsigns.enable = true;
-    autopairs.enable = true;
+    autopairs.nvim-autopairs.enable = true;
     # notes.obsidian.enable = true;
     utility = {
       vim-wakatime.enable = true;
