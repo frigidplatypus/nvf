@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   config.vim.treesitter = {
     enable = true;
     highlight.enable = true;
@@ -34,7 +34,6 @@
       vim
       vimdoc
     ];
-
   };
 
   config.vim.lsp = {
@@ -55,7 +54,7 @@
     markdown.enable = true;
     nix = {
       enable = true;
-      format.type = "nixfmt";
+      format.type = "alejandra";
     };
     python.enable = true;
     rust.enable = true;

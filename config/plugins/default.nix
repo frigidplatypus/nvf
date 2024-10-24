@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   config.vim = {
     statusline.lualine.enable = true;
     telescope.enable = true;
@@ -41,7 +41,6 @@
         };
       };
     };
-
 
     extraPlugins = with pkgs.vimPlugins; {
       dashboard-nvim = {

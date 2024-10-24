@@ -8,6 +8,8 @@
       "<leader>t".action = "<cmd>ToggleTerm<CR>";
       "<leader>P".action = "<cmd>lua require(\"img-clip\").paste_image({dir_path=\"images\",  file_name = \"image.png\"})<CR>";
     };
-    insert = { "jj".action = "<ESC>"; };
+    insert = {
+      "jj".action = "<ESC>";
+    };
   };
 }

@@ -4,5 +4,4 @@
     name = "tokyonight";
     style = "night";
   };
-
 }

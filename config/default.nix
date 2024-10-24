@@ -1,6 +1,15 @@
-{ pkgs, inputs, ... }: {
-  imports =
-    [ ./keybinds.nix ./plugins ./theme.nix ./autocomplete.nix (import ./languages.nix { inherit pkgs; }) ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./keybinds.nix
+    ./plugins
+    ./theme.nix
+    ./autocomplete.nix
+    (import ./languages.nix {inherit pkgs;})
+  ];
   config.vim = {
     updateTime = 100;
     lineNumberMode = "relNumber";
@@ -15,4 +24,3 @@
     '';
   };
 }
-
