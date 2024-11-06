@@ -5,22 +5,27 @@
       url = "github:notashelf/nvf/v0.7";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     nixpkgs,
     nvf,
+    flake-utils,
     ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    configModule = import ./config;
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = nixpkgs.legacyPackages.${system};
+      configModule = import ./config;
 
-    customNeovim = nvf.lib.neovimConfiguration {
-      modules = [configModule];
-      inherit pkgs;
-    };
-  in {
-    packages.${system}.default = customNeovim.neovim;
-  };
+      customNeovim = nvf.lib.neovimConfiguration {
+        modules = [configModule];
+        inherit pkgs;
+      };
+    in {
+      packages = rec {
+        neovim = customNeovim.neovim;
+        default = neovim;
+      };
+    });
 }
