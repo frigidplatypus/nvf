@@ -15,9 +15,12 @@
       noice.enable = true;
       colorizer.enable = true;
     };
-    visuals.indentBlankline = {
+    visuals.indent-blankline = {
       enable = true;
-      setupOpts.indent.tab_char = "|";
+      setupOpts = {
+        scope.exclude.language = ["dashboard"];
+        indent.tab_char = "|";
+      };
     };
     git.gitsigns.enable = true;
     autopairs.nvim-autopairs.enable = true;
