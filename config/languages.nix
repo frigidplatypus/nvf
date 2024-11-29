@@ -33,6 +33,7 @@
       typescript
       vim
       vimdoc
+      nu
     ];
   };
 
