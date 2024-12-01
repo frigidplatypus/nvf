@@ -14,7 +14,6 @@
     updateTime = 100;
     lineNumberMode = "relNumber";
     useSystemClipboard = true;
-    leaderKey = " ";
     autoIndent = true;
     spellcheck.enable = true;
     luaConfigPost = ''
