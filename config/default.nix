@@ -11,10 +11,10 @@
     (import ./languages.nix {inherit pkgs;})
   ];
   config.vim = {
-    updateTime = 100;
+    options.updatetime = 100;
     lineNumberMode = "relNumber";
     useSystemClipboard = true;
-    autoIndent = true;
+    options.autoindent = true;
     spellcheck.enable = true;
     luaConfigPost = ''
       vim.opt.tabstop = 2
